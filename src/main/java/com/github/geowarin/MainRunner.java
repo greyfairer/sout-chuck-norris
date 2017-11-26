@@ -20,7 +20,7 @@ class MainRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         while (true) {
-            log.info(chuckNorrisFeignClient.getJokes(1).toString());
+            log.info(chuckNorrisFeignClient.getJokes(2).toString());
             Thread.sleep(5000);
         }
     }

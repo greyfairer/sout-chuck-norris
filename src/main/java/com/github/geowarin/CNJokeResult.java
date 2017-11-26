@@ -4,9 +4,9 @@ import com.google.common.collect.Lists;
 
 import java.util.List;
 
-public class JokeResponse {
+public class CNJokeResult {
     private String type;
-    private List<Joke> value = Lists.newArrayList();
+    private Joke value;
 
     public String getType() {
         return type;
@@ -16,16 +16,16 @@ public class JokeResponse {
         this.type = type;
     }
 
-    public List<Joke> getValue() {
+    public Joke getValue() {
         return value;
     }
 
-    public void setValue(List<Joke> value) {
+    public void setValue(Joke value) {
         this.value = value;
     }
 
     @Override
     public String toString() {
-        return value.isEmpty() ? "" : value.get(0).getJoke();
+        return value.getJoke();
     }
 }
